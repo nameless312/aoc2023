@@ -17,9 +17,10 @@ func main() {
 		return
 	}
 
-	// Convert the byte slice to string and split it into lines
-	lines := strings.Split(string(content), "\n")
-	solve1(lines);
-	// solve2(lines);
+	/// Convert the byte slice to string and split it into lines
+	stripped_content := strings.TrimSpace(string (content))
+	lines := strings.Split(stripped_content, "\n")
+	fmt.Println("Part 1 - ", solve1(lines));
+	// fmt.Println("Part 1 - ", solve2(lines));
 	
 }
